@@ -1,0 +1,3 @@
+/Users/yomi4486/xero_editer/build/CMakeFiles/xero_editer.dir
+/Users/yomi4486/xero_editer/build/CMakeFiles/edit_cache.dir
+/Users/yomi4486/xero_editer/build/CMakeFiles/rebuild_cache.dir
