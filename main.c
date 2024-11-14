@@ -19,7 +19,29 @@ int main(int argc, char *argv[]){
 	    }
         fclose(fp);
     }else{
-        printf("ファイルの指定はありませんでした");
+        printf("Select options...\n");
+        printf("n: new file\no: open file\nh: help\nq: quit\n> ");
+        char option[1];
+        scanf("%s", option);
+        if(option[0] == 'n'){
+            // 新規作成の処理
+        }else if(option[0] == 'o'){
+            char path[256];
+            printf("Type to file path > ");
+            scanf("%s", path);
+            FILE * fp = NULL; // こーぞーたい
+        
+            fp = fopen(&path[0], "r");
+            if(fp == NULL) {
+                printf("%s file not open!\n", argv[1]);
+                return -1;
+            }
+            int chr;
+            while((chr = fgetc(fp)) != EOF) {
+                putchar(chr);
+            }
+            fclose(fp);
+        };
         // ファイルが何も指定されなかった時の処理
     };
 
